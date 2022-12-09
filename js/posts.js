@@ -9,16 +9,14 @@ function addLinkBtn() {
     
     let linkDiv = document.getElementById('link-div');
         linkDiv.append(linkBtn);
-
-}
-async function fetchBlogData(e) {
     
+}
+
+async function fetchBlogData() {
     const response = await fetch ('https://blog-api-assignment.up.railway.app/posts');
 
     const blogData = await response.json()
-    console.log(blogData)
 
-    
     let blogContent = '';
     for (let data of blogData) {
 
@@ -31,14 +29,16 @@ async function fetchBlogData(e) {
             <p id="text">${limitContent(data.content, 100)}<a href="post.html" class="read-more">Read more</a></p> 
         </section>
         `;
+
     }
     document.getElementById('new-section-div').innerHTML= blogContent;
     
 }
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+}
 
 function limitContent (string = '', limit = 0) {  
-return string.substring(0, limit) + "..."
+return string.substring(0, limit) + "...";
 }
