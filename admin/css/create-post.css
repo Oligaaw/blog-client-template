@@ -1,0 +1,29 @@
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+input {
+    padding: 10px;
+}
+
+form a {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+}
