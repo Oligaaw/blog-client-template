@@ -24,7 +24,7 @@ const postApp = () => {
                         <td class="table__data">${res.tags.join(', ')}</td>
                         <td class="table__data">${resDate.getFullYear()}-${resDate.getMonth()}-${resDate.getDate()}</td>
                         <td class="table__data table__data-buttons">
-						    <a href="">Update</a>
+						    <a href="update-post.html?id=${res._id}">Update</a>
 						    <a href="#" data-id="${res._id}" class="delete-buttons">Delete</a>
 					    </td>
                     </tr>
