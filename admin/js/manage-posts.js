@@ -41,8 +41,6 @@ const postApp = () => {
 
         const deleteButtons = document.querySelectorAll('.delete-buttons');
 
-        console.log(deleteButtons)
-
         for(let deleteButton of deleteButtons) {
             deleteButton.addEventListener('click', async (event) => {
 

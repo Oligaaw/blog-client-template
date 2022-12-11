@@ -7,13 +7,14 @@ const createPostApp = () => {
         const inputValue = event.target
 
         let formData = new FormData(inputValue); 
-
+        
         console.log(formData)
+
 
         let formDataObject = {
             title: formData.get('title'),
             author: formData.get('name'),
-            tags: formData.get('tags'),
+            tags: formData.getAll('tags'),
             content: formData.get('content')
         }
 
