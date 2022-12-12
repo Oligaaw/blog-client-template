@@ -26,10 +26,9 @@ async function fetchBlogData() {
             <h3>${capitalizeFirstLetter(data.author)}</h3>
             <i>${data.date}</i>
             <p>Tags: ${data.tags.join(', ')}</p>
-            <p id="text">${limitContent(data.content, 100)}<a href="post.html" class="read-more">Read more</a></p> 
+            <p id="text">${limitContent(data.content, 100)}<a href="post.html?id=${data._id}" class="read-more">Read more</a></p>
         </section>
         `;
-
     }
     document.getElementById('new-section-div').innerHTML= blogContent;
     
