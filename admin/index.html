@@ -9,63 +9,85 @@
 
     <div class="container">
 
-		<nav>
-			<a href="../index.html" class="link">Blog page</a>
-		</nav>
+		<section class="section">
+			<div class="section__inner">
+
+				<nav class="section__menu">
+					<a href="../index.html">Blog page</a>
+				</nav>
+				
+				<table class="table">
+					<div class="table__content">
+						<h1 class="table__title">Handle blog posts</h1>
+						<a href="create-post.html">Create new post</a>
+					</div>
 		
-		<table class="table">
-			<a href="create-post.html" class="link">Create new post</a>
+					<thead>
+						<tr class="table__row">
+							<th class="table__head">
+								<p>Title</p>
+							</th>
+							<th class="table__head">
+								<p>Author</p>
+							</th>
+							<th class="table__head">
+								<p>Tags</p>
+							</th>
+							<th class="table__head">
+								<p>Date</p>
+							</th>
+							<th class="table__head">
+								<p>Action</p>
+							</th> 
+						</tr>
+					</thead>
+		
+					<tbody class="table__body">
+		
+						<!-- <tr class="table__row">
+							<td class="table__data">I'm studying Webdesign</td>
+							<td class="table__data">Natalia Sundström</td>
+							<td class="table__data">Front end, Back end, Javascript, HTML</td>
+							<td class="table__data">2022-12-08</td>
+							<td class="table__data">
+								<a href="">Update</a>
+								<a href="">Delete</a>
+							</td>
+						</tr>
+						<tr class="table__row">
+							<td class="table__data">I'm studying Webdesign</td>
+							<td class="table__data">Natalia Sundström</td>
+							<td class="table__data">Front end, Back end, Javascript, HTML</td>
+							<td class="table__data">2022-12-08</td>
+							<td class="table__data">
+								<a href="">Update</a>
+								<a href="">Delete</a>
+							</td>
+							
+						</tr>
+						<tr class="table__row">
+							<td class="table__data">I'm studying Webdesign</td>
+							<td class="table__data">Natalia Sundström</td>
+							<td class="table__data">Front end, Back end, Javascript, HTML</td>
+							<td class="table__data">2022-12-08</td>
+							<td class="table__data">
+								<a href="">Update</a>
+								<a href="">Delete</a>
+							</td>
+		
+						</tr> -->
+		
+					</tbody>
+		
+				</table>
+				
 
-			<thead>
-				<tr class="table__row">
-					<th class="table__head">Title</th>
-					<th class="table__head">Author</th>
-					<th class="table__head">Tag</th>
-					<th class="table__head">Date</th>
-					<th class="table__head">Action</th>
-				</tr>
-			</thead>
+			</div>
+		</section>
 
-			<tbody class="table__body">
-
-				<!-- <tr class="table__row">
-					<td class="table__data">I'm studying Webdesign</td>
-					<td class="table__data">Natalia Sundström</td>
-					<td class="table__data">Front end, Back end, Javascript, HTML</td>
-					<td class="table__data">2022-12-08</td>
-					<td class="table__data">
-						<a href="">Update</a>
-						<a href="">Delete</a>
-					</td>
-				</tr>
-				<tr class="table__row">
-					<td class="table__data">I'm studying Webdesign</td>
-					<td class="table__data">Natalia Sundström</td>
-					<td class="table__data">Front end, Back end, Javascript, HTML</td>
-					<td class="table__data">2022-12-08</td>
-					<td class="table__data">
-						<a href="">Update</a>
-						<a href="">Delete</a>
-					</td>
-					
-				</tr>
-				<tr class="table__row">
-					<td class="table__data">I'm studying Webdesign</td>
-					<td class="table__data">Natalia Sundström</td>
-					<td class="table__data">Front end, Back end, Javascript, HTML</td>
-					<td class="table__data">2022-12-08</td>
-					<td class="table__data">
-						<a href="">Update</a>
-						<a href="">Delete</a>
-					</td>
-
-				</tr> -->
-
-			</tbody>
-
-		</table>
 
     </div>
+	
     <script src="js/manage-posts.js"></script>
 </body>
 </html>

@@ -1,3 +1,55 @@
+@import 'basic-style.css';
+
+.section {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.section__inner {
+    grid-column: inner;
+}
+
+.section__menu {
+    margin-top: 32px;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.section__menu::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+}
+
+.table__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table__content {
+    margin: 2rem 0 0.5rem 0;
+}
+
+.table__content h1 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+.section__menu a {
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+}
+
+.table__content a {
+    text-decoration: none;
+}
+
 .table,
 .table__head,
 .table__data,
@@ -5,5 +57,6 @@
     border: 2px solid black;
     border-collapse: collapse;
     padding: 0.5rem;
-    margin-top: 1rem;
-}; 
+    margin: 0 auto 32px;
+    /* width: 100%; */
+}

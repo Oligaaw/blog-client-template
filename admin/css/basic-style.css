@@ -1,0 +1,9 @@
+:root {
+    --grid-container: minmax(30px, 1fr) [inner-start] minmax(0, 78rem) [inner-end] minmax(30px, 1fr)
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+}

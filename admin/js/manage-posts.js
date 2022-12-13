@@ -9,6 +9,11 @@ const postApp = () => {
 
             const API_URL = 'https://blog-api-assignment.up.railway.app/posts'; 
             const getData = await fetch(API_URL);
+
+            if(!getData.ok) {
+                throw new Error('Something went wrong!')
+            }
+
             const response = await getData.json();
 
             let postTemplate = '';
@@ -17,12 +22,26 @@ const postApp = () => {
 
                 let resDate = new Date(res.date)
 
+                let resDatehour = resDate.getHours()
+                let resDateMinutes = resDate.getMinutes()
+
+                resDatehour = resDatehour < 10 ? "0" + resDatehour : resDatehour;
+                resDateMinutes = resDateMinutes < 10 ? "0" + resDateMinutes : resDateMinutes
+
                 postTemplate += `
                     <tr class="table__row">
-                        <td class="table__data">${res.title}</td>
-                        <td class="table__data">${res.author}</td>
-                        <td class="table__data">${res.tags.join(', ')}</td>
-                        <td class="table__data">${resDate.getFullYear()}-${resDate.getMonth()}-${resDate.getDate()}</td>
+                        <td class="table__data">
+                            <p>${res.title}</p>
+                        </td>
+                        <td class="table__data">
+                            <p>${res.author}</p>
+                        </td>
+                        <td class="table__data">
+                            <p>${res.tags.join()}</p>
+                        </td>
+                        <td class="table__data">
+                            <p>${resDate.getFullYear()}-${resDate.getMonth()}-${resDate.getDate()} | ${resDatehour}:${resDateMinutes}</p>
+                        </td>
                         <td class="table__data table__data-buttons">
 						    <a href="update-post.html?id=${res._id}">Update</a>
 						    <a href="#" data-id="${res._id}" class="delete-buttons">Delete</a>
