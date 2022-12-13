@@ -24,15 +24,25 @@
     bottom: 0;
 }
 
-.table__content {
+.section__menu a,
+.table__content a {
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: right;
+    color: var(--color-blue);
+}
+
+.section__menu a:hover,
+.table__content a:hover {
+    color: var(--color-blue-hover);
+}
+
+.table__content a {
+    text-decoration: none;
 }
 
 .table__content {
-    margin: 2rem 0 0.5rem 0;
+    margin: 3rem 0 0.5rem 0;
 }
 
 .table__content h1 {
@@ -40,23 +50,42 @@
     padding-bottom: 0.5rem;
 }
 
-.section__menu a {
-    text-decoration: none;
-    display: flex;
-    justify-content: right;
-}
-
-.table__content a {
-    text-decoration: none;
+.table {
+    width: 100%;
+    margin-bottom: 32px;
+    border-radius: 1rem;
+    background-color: var(--color-light-blue);
 }
 
 .table,
 .table__head,
 .table__data,
 .table__row {
-    border: 2px solid black;
     border-collapse: collapse;
+    border: 2px solid white;
     padding: 0.5rem;
-    margin: 0 auto 32px;
-    /* width: 100%; */
+    
+}
+
+.table__head p {
+    text-align: left;
+}
+
+.table__data .delete-buttons,
+.table__data .update-buttons {
+    text-decoration: none;
+    color: var(--color-blue);
+
+}
+
+.table__data .delete-buttons:hover,
+.table__data .update-buttons:hover {
+    color: var(--color-blue-hover);
+
+}
+
+.table__data .update-buttons::after {
+    content: '|';
+    margin-left: 0.25rem;
+    color: black;
 }

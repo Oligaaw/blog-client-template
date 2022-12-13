@@ -37,13 +37,13 @@ const postApp = () => {
                             <p>${res.author}</p>
                         </td>
                         <td class="table__data">
-                            <p>${res.tags.join()}</p>
+                            <p>${res.tags.join(', ')}</p>
                         </td>
                         <td class="table__data">
-                            <p>${resDate.getFullYear()}-${resDate.getMonth()}-${resDate.getDate()} | ${resDatehour}:${resDateMinutes}</p>
+                            <p>${resDate.getFullYear()}-${resDate.getMonth()}-${resDate.getDate()} ${resDatehour}:${resDateMinutes}</p>
                         </td>
                         <td class="table__data table__data-buttons">
-						    <a href="update-post.html?id=${res._id}">Update</a>
+						    <a href="update-post.html?id=${res._id}" class="update-buttons">Update</a>
 						    <a href="#" data-id="${res._id}" class="delete-buttons">Delete</a>
 					    </td>
                     </tr>
