@@ -1,0 +1,14 @@
+:root {
+    --grid-container: minmax(30px, 1fr) [inner-start] minmax(0, 78rem) [inner-end] minmax(30px, 1fr);
+    --color-blue: #3694f2;
+    --color-light-blue: #f0f8ff;
+    --color-blue-hover: #82bbf3;
+    --color-white: #FFFF;
+    --color-black: #000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+}

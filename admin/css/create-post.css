@@ -1,5 +1,24 @@
+@import 'basic-style.css';
 
-.container {
+
+.create-post {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding-top: 32px;
+}
+
+.create-post__inner {
+    grid-column: inner;
+}
+
+.create-post__inner h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+form {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -7,11 +26,13 @@
 input,
 textarea,
 select {
+    background-color: var(--color-light-blue);
+    border: none;
     width: 100%;
     margin: 0.5rem 0 1rem 0;
     border-radius: 0.5rem;
-    border: 1px solid #333;
     padding: 0.75rem;
+    font-size: 1rem;
 }
 
 input {
@@ -24,11 +45,35 @@ form a {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+label {
+    font-weight: 700;
+    color: var(--color-black);
 }
 
-#content::placeholder{
-    font-family: Arial, Helvetica, sans-serif;
+::placeholder,
+option,
+.create-post__button-submit {
+    color: var(--color-black);
+    font-family: 'poppins', sans-serif;
 }
+
+option:hover {
+    background-color: var(--color-blue-hover);
+    color: var(--color-white);
+    border-radius: 0.125rem;
+    cursor: pointer;
+}
+
+.create-post__button-submit:hover {
+    cursor: pointer;
+}
+
+.create-post__button-back {
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
+.create-post__button-back:hover {
+    color: var(--color-blue-hover);
+}
+

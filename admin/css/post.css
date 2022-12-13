@@ -1,9 +1,91 @@
+@import 'basic-style.css';
+
+.section {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.section__inner {
+    grid-column: inner;
+}
+
+.section__menu {
+    margin-top: 32px;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.section__menu::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+}
+
+.section__menu a,
+.table__content a {
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    color: var(--color-blue);
+}
+
+.section__menu a:hover,
+.table__content a:hover {
+    color: var(--color-blue-hover);
+}
+
+.table__content a {
+    text-decoration: none;
+}
+
+.table__content {
+    margin: 3rem 0 0.5rem 0;
+}
+
+.table__content h1 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 32px;
+    border-radius: 1rem;
+    background-color: var(--color-light-blue);
+}
+
 .table,
 .table__head,
 .table__data,
 .table__row {
-    border: 2px solid black;
     border-collapse: collapse;
+    border: 2px solid white;
     padding: 0.5rem;
-    margin-top: 1rem;
-}; 
+    
+}
+
+.table__head p {
+    text-align: left;
+}
+
+.table__data .delete-buttons,
+.table__data .update-buttons {
+    text-decoration: none;
+    color: var(--color-blue);
+
+}
+
+.table__data .delete-buttons:hover,
+.table__data .update-buttons:hover {
+    color: var(--color-blue-hover);
+
+}
+
+.table__data .update-buttons::after {
+    content: '|';
+    margin-left: 0.25rem;
+    color: black;
+}
