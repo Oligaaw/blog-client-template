@@ -13,11 +13,12 @@ window.onload = function() {
 
             let blogTemplate = `
             <div class="content">
-                <h2 class="content__title">${response.title}</h2>
-                <p class="content__author">Author: ${response.author}</p>
+                <a href="admin/index.html" class="admin-btn-link">Admin</a>
+                <h2 class="content__title">${capitalizeFirstLetter(response.title)}</h2>
+                <p class="content__author"><b>${capitalizeFirstLetter(response.author)}</b></p>
                 <p class="content__text">${response.content}</p>
                 <p class="content__tags">Tags: <em>${response.tags.join(', ')}</em></p>
-                <a href="index.html" class="content__button">&#x2190; back</a>
+                <a href="index.html" class="content__button">&#x2190; Back</a>
             </div>
             
             `
@@ -29,6 +30,10 @@ window.onload = function() {
 
         }
 
+    }
+    
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     getSinglePost()
