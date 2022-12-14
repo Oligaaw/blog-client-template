@@ -1,29 +1,63 @@
 
+h1, 
+a, 
+label, 
+.submit-btn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: seagreen;
+}
+
+label,
+.submit-btn {
+    font-size: 17px;
+}
+
+input,
+select, 
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid seagreen;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
 .container {
     max-width: 600px;
     margin: 20px auto;
 }
 
-input,
-textarea,
 select {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #333;
+    padding: 2px;
 }
 
 input {
     padding: 10px;
 }
 
+.submit-btn:hover {
+    color: lightseagreen;
+    cursor: pointer;
+}
+
 form a {
-    width: 100%;
-    display: block;
-    text-align: center;
+    margin: 0 auto;
+    width: 60px;
 }
 
 a {
     text-decoration: none;
-    color: darkblue;
+}
+
+a:hover {
+    color: lightseagreen;
 }
