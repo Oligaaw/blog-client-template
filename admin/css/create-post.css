@@ -1,6 +1,5 @@
 @import 'basic-style.css';
 
-/* BASIC */
 .create-post {
     display: grid;
     grid-template-columns: var(--grid-container);
@@ -24,6 +23,16 @@ form {
 }
 
 input,
+textarea {
+    padding: 0.75rem;
+    
+}
+
+select {
+    padding: 0.625rem;
+}
+
+input,
 textarea,
 select {
     background-color: var(--color-light-blue);
@@ -31,7 +40,6 @@ select {
     width: 100%;
     margin: 0.5rem 0 1rem 0;
     border-radius: 0.5rem;
-    padding: 0.75rem;
     font-size: 1rem;
 }
 
@@ -41,19 +49,19 @@ textarea:focus {
     outline-color: var(--color-blue-hover);
 }
 
-input {
-    padding: 0.75rem;
+select option {
+    color: var(--color-black);
+    padding: 2px;
 }
 
-/* SELECT OPTION */
 select option:hover {
     background-color: var(--color-blue-hover);
-    border-radius: 0.125rem;
     cursor: pointer;
 } 
 
 select option:checked {
     box-shadow: 0 0 10px 100px var(--color-blue) inset;
+
 }
 
 label, 
@@ -72,10 +80,9 @@ label {
 }
 
 ::placeholder {
-    color: rgb(104, 98, 98);
+    color: #686262;
 }
 
-/* BUTTONS */
 .create-post__button-submit:hover {
     cursor: pointer;
     background-color: var(--color-blue-hover);
