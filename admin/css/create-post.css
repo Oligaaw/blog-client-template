@@ -1,10 +1,10 @@
 @import 'basic-style.css';
 
-
+/* BASIC */
 .create-post {
     display: grid;
     grid-template-columns: var(--grid-container);
-    padding-top: 32px;
+    padding: 2rem 0 2rem 0;
 }
 
 .create-post__inner {
@@ -35,43 +35,62 @@ select {
     font-size: 1rem;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline-color: var(--color-blue-hover);
+}
+
 input {
     padding: 0.75rem;
 }
 
-form a {
-    width: 100%;
-    display: block;
-    text-align: center;
+/* SELECT OPTION */
+select option:hover {
+    background-color: var(--color-blue-hover);
+    border-radius: 0.125rem;
+    cursor: pointer;
+} 
+
+select option:checked {
+    box-shadow: 0 0 10px 100px var(--color-blue) inset;
+}
+
+label, 
+::placeholder {
+    font-family: 'poppins', sans-serif;
+}
+
+label,
+::placeholder,
+.create-post__button-submit {
+    color: var(--color-black);
 }
 
 label {
     font-weight: 700;
-    color: var(--color-black);
 }
 
-::placeholder,
-option,
-.create-post__button-submit {
-    color: var(--color-black);
-    font-family: 'poppins', sans-serif;
+::placeholder {
+    color: rgb(104, 98, 98);
 }
 
-option:hover {
-    background-color: var(--color-blue-hover);
-    color: var(--color-white);
-    border-radius: 0.125rem;
-    cursor: pointer;
-}
-
+/* BUTTONS */
 .create-post__button-submit:hover {
     cursor: pointer;
+    background-color: var(--color-blue-hover);
+    font-size: 1rem;
 }
 
 .create-post__button-back {
     text-decoration: none;
     color: var(--color-blue);
+    font-size: 1rem;
+    display: block;
+    width: 3.75rem;
+    margin: 0 auto;
 }
+
 
 .create-post__button-back:hover {
     color: var(--color-blue-hover);
