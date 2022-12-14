@@ -38,6 +38,7 @@ h1 {
 
 select {
     padding: 2px;
+    height: 140px;
 }
 
 input {
