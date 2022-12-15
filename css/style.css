@@ -40,7 +40,11 @@ body {
 .admin-link:hover{
     color: lightseagreen;
 }
-
+#text{
+    inline-size: 600px; 
+    overflow: hidden;
+      
+}
 #post-section{ 
     width: 600px;
     margin-top: 20px;
