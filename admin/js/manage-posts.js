@@ -40,7 +40,7 @@ const postApp = () => {
                             <p>${res.tags.join(', ')}</p>
                         </td>
                         <td class="table__data">
-                            <p>${resDate.getFullYear()}-${resDate.getMonth()}-${resDate.getDate()} ${resDatehour}:${resDateMinutes}</p>
+                            <p>${resDate.getFullYear()}-${resDate.getMonth() + 1}-${resDate.getDate()} ${resDatehour}:${resDateMinutes}</p>
                         </td>
                         <td class="table__data table__data-buttons">
 						    <a href="update-post.html?id=${res._id}" class="update-buttons">Update</a>
