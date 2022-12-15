@@ -60,7 +60,7 @@ select option:hover {
 } 
 
 select option:checked {
-    box-shadow: 0 0 10px 100px var(--color-blue-hover) inset;
+    box-shadow: 0 0 10px 100px var(--color-blue) inset;
 
 }
 
